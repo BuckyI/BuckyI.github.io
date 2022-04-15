@@ -4,5 +4,10 @@
 			"path": "."
 		}
 	],
-	"settings": {}
+	"settings": {
+		"[markdown]": {},
+		"frontMatter.content.autoUpdateDate": false,
+		"frontMatter.framework.startCommand": "hexo serve",
+		"frontMatter.preview.host": "http://localhost:4000/"
+	}
 }
