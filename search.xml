@@ -4,9 +4,12 @@
     <title>Hello World</title>
     <url>/2022/01/26/hello-world/</url>
     <content><![CDATA[<meta name="referrer" content="no-referrer">
-<p>Hello World</p>
-<img src="/2022/01/26/hello-world/47428016237273462.png" class="">
+<p>Hello World.</p>
+<!-- <img src="/2022/01/26/hello-world/47428016237273462.png" class=""> -->
 ]]></content>
+      <categories>
+        <category>gallery</category>
+      </categories>
   </entry>
   <entry>
     <title>Hexo</title>
@@ -369,5 +372,8 @@ content <a href="#fnref2" class="footnote-backref">↩︎</a></p>
 <p>至于未来有什么忧虑的事情，对于一个未来不明确的人而言，的确有很多。我担心会和现在的朋友失去联系。之前我想“嘿，如果别人真的想找我玩会叫我说‘ 嘿，你要出来玩吗 ’ ”，结果真的没有…… 我知道我有很多问题需要解决，但是，最近一段时间我想做一些别的事情。</p>
 <p>I think that’s it. 希望你幸福！</p>
 ]]></content>
+      <tags>
+        <tag>Diary</tag>
+      </tags>
   </entry>
 </search>
