@@ -42,10 +42,9 @@ external_link:
   exclude: ''
 filename_case: 0
 render_drafts: false
+
 post_asset_folder: true # false
-marked:  # hexo-renderer-marked 3.1.0 introduced a new option that allows you to embed an image in markdown without using asset_img tag plugin.
-  prependRoot: true
-  postAsset: true
+
 relative_link: false # 如果设为true, 文章打开是没有格式的.. 不知道为啥
 future: true
 highlight:
@@ -105,44 +104,31 @@ ignore:
 # theme: landscape
 theme: frame
 
-# parserer: markdown-it
-markdown:
-  preset: 'default'
-  render:
-    html: true
-    xhtmlOut: false
-    langPrefix: 'language-'
-    breaks: true
-    linkify: true
-    typographer: true
-    quotes: '“”‘’'
-  enable_rules:
-  disable_rules:
-  plugins:
-    - markdown-it-abbr
-    - markdown-it-cjk-breaks
-    - markdown-it-container
-    - markdown-it-deflist
-    - markdown-it-emoji
-    - markdown-it-footnote
-    - markdown-it-ins
-    - markdown-it-mark
-    - markdown-it-sub
-    - markdown-it-sup
-    # 第三方
-    - name: "markdown-it-toc-done-right"
-      options:
-        level: 2
-        listType: 'ul'
-  anchors:
-    level: 2
-    collisionSuffix: ''
-    permalink: false
-    permalinkClass: 'header-anchor'
-    permalinkSide: 'left'
-    permalinkSymbol: '¶'
-    case: 0
-    separator: '-'
+# parserer: marked
+marked:
+  gfm: true
+  pedantic: false
+  breaks: true
+  smartLists: true
+  smartypants: true
+  quotes: '“”‘’'
+  modifyAnchors: 0
+  anchorAlias: false
+  autolink: true
+  mangle: true
+  sanitizeUrl: false
+  dompurify: false
+  headerIds: true # 默认给标题添加锚点
+  lazyload: true
+  # hexo-renderer-marked 3.1.0 introduced a new option that allows you to embed an image in markdown without using asset_img tag plugin.
+  prependRoot: true
+  postAsset: true
+  external_link:
+    enable: true # Open external links in a new tab.
+    exclude: []
+    nofollow: false
+  disableNunjucks: true # Nunjucks tags {{ }} or {% %} (usually used by tag plugins) will not be rendered.
+  descriptionLists: false # Definition Lists
 
 # MathJax Support (hexo-filter-mathjax)
 mathjax:
