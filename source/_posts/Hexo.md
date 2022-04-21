@@ -1,7 +1,8 @@
 ---
 title: Hexo
 date: 2022-01-31 02:03:38
-tags:
+tags: null
+lastmod: 2022-04-21 12:41:21
 ---
 <!-- markdownlint-disable MD033 -->
 <!-- markdownlint-disable MD025 -->
@@ -60,7 +61,7 @@ INFO  Hexo is running at http://localhost:4000/ . Press Ctrl+C to stop.
 ```
 
 进入初始的网页：
-![](assets/Hexo/2022-01-26-19-31-16.png)
+![](2022-01-26-19-31-16.png)
 其实来源于 source 文件夹下的 markdown 文件：[[hello-world]]
 
 ### 部署
@@ -167,7 +168,7 @@ drwxr-xr-x 1 45489 197609   0 Jan 26 20:07 ../
 -rw-r--r-- 1 45489 197609  98 Jan 26 20:07 id_ed25519.pub
 ```
 
-![](assets/Hexo/2022-01-26-20-14-04.png)
+![](2022-01-26-20-14-04.png)
 
 ##### 添加到 GitHub
 
@@ -202,7 +203,7 @@ Hi BuckyI! You've successfully authenticated, but GitHub does not provide shell 
 ```
 
 连接成功
-![](assets/Hexo/2022-01-26-20-24-25.png)
+![](2022-01-26-20-24-25.png)
 
 ## hexo 命令
 
@@ -263,7 +264,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque hendrerit 
 ```
 
 实际显示：都是一样的
-![](assets/Hexo/2022-01-27-15-27-03.png)
+![](2022-01-27-15-27-03.png)
 
 在文章中使用 `<!-- more -->`，那么 `<!-- more -->` 之前的文字将会被视为摘要。首页中将只出现这部分文字，同时这部分文字也会出现在正文之中。
 
@@ -306,7 +307,7 @@ marked:  # hexo-renderer-marked 3.1.0 introduced a new option that allows you to
 
 1. ~~图片都放在 `source` 下面~~ （不方便，不考虑）
 2. 图片分别放在 `title` 文件夹里面，然后安装插件统一起来
-   不过还有问题。.. 因为我平时写的时候，对于`mark.md`, 图片喜欢放在`assets/mark/pic.jpg`
+   不过还有问题。.. 因为我平时写的时候，对于`mark.md`, 图片喜欢放在`mark/pic.jpg`
    也许只能以后转化的时候手动挪一挪了。
 3. 图床
 
@@ -320,10 +321,10 @@ marked:  # hexo-renderer-marked 3.1.0 introduced a new option that allows you to
 可参考 [【基础篇】hexo 博客搭建教程 - huanhao - 博客园](https://www.cnblogs.com/huanhao/p/hexobase.html)
 
 其实一般都有安装说明
-![](assets/Hexo/2022-01-26-21-37-47.png)
+![](2022-01-26-21-37-47.png)
 
 - 主题使用 coder 感觉比较简单.
-  ![](assets/Hexo/2022-01-28-14-10-58.png)
+  ![](2022-01-28-14-10-58.png)
 - 一个更复杂的 Ocean 有点搞不好，以后熟悉了可以试一试.
 [Xunzhuo/Coder: A fast、pure、practical、elegant Hexo theme for Developers🔥🔥🔥](https://github.com/Xunzhuo/Coder)
 - 看到一个 Next, 好像挺受欢迎的，如果以后重度使用可以考虑一下
@@ -380,13 +381,13 @@ Themes:
 <a id="图片路径"></a>
 > 前面有提到，hexo 加入图片的方法与 markdown 本身不兼容. 因为路径起点不一样.
 > 百度的话，有很多就像 [这里](https://www.cnblogs.com/codehome/p/8428738.html?utm_source=debugrun&utm_medium=referral) 说要安装一个 `hexo-asset-image`
-> 但是 [这里](https://github.com/hexojs/hexo/issues/4772#issuecomment-917356786) 说其已经失效了.
+> 但是 [这里](https://github.com/hexojs/issues/4772#issuecomment-917356786) 说其已经失效了.
 
 `npm install hexo-image-link --save`
 [cocowool/hexo-image-link: 当 MD 中引用本地文件时，处理生成的 html 中的图片链接。](https://github.com/cocowool/hexo-image-link)
 命令行输出比较多，好像所有图片都给你输出一遍，但是哪个地方出错了无法定位，它只输出一个没有路径，并且不进行替换。
 另外 `test/test.jpg` 能成功显示而 `./test/test.jpg` 就显示不了.... 感觉不太接受
-![](assets/Hexo/2022-01-28-15-53-45.png)
+![](2022-01-28-15-53-45.png)
 
 `npm install hexo-simple-image --save`
 [ZaiZheTingDun/hexo-simple-image: hexo image plugins](https://github.com/ZaiZheTingDun/hexo-simple-image)
@@ -441,7 +442,7 @@ search:
 如果去插件那里搜一下，其他的 renderer 有非常多. 但是我查了一下，vscode 用的是 markdown-it, pandoc 应该也可以.
 
 [hexojs/hexo-renderer-markdown-it: Markdown-it is a Markdown parser, done right. A faster and CommonMark compliant alternative for Hexo.](https://github.com/hexojs/hexo-renderer-markdown-it)
-![](assets/Hexo/2022-01-28-22-03-37.png)
+![](2022-01-28-22-03-37.png)
 [wzpan/hexo-renderer-pandoc: A pandoc-markdown-flavor renderer for hexo.](https://github.com/wzpan/hexo-renderer-pandoc)
 
 `2022.01.31` 选择的是 markdown-it
@@ -603,7 +604,7 @@ plugins:
 ##### 尝试一 markdown-it-plus
 
 使用 markdown-it-plus 渲染器，说可以支持公式，但是显示不正常...
-![](assets/Hexo/2022-01-30-20-24-31.png)
+![](2022-01-30-20-24-31.png)
 查了一下似乎得修改模板文件，让 html 标题头添加 css 文件.. 不了解，没有尝试.
 > Katex plugin is enabled by default. However, this renderer alone does not work out of the box for mathematical formulas to display correctly on your website. Therefore, you do not need to do anything if you do not want to use Katex. Otherwise, if you want to use katex, you must add this css style to your website: <https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css>
 
@@ -619,7 +620,7 @@ plugins:
 行间公式（独立成段的） : <img src="https://math.now.sh?from=%5Cfrac%7Ba%7D%7Bb%7D%3D1%0A" />
 就是把公式渲染成了图片。
 但是对于我用的 coder 主题而言，效果是公式占满了一行.
-![](assets/Hexo/2022-01-30-22-47-07.png)
+![](2022-01-30-22-47-07.png)
 看了下网页代码，发现有一行让图片宽度固定为 `100%` 的样式文件，来自于 `\themes\coder\source\css\_partial\markdown.styl` 里面的
 
 ```css
@@ -644,9 +645,9 @@ plugins:
 > 不需要其他任何操作！包括修改模板文件
 
 这个插件是把公式渲染成了 svg 图片代码，不需要依靠外部支持. 也不依赖特定的渲染器（虽然 GitHub 主页推荐 pandoc)
-![](assets/Hexo/2022-01-30-23-31-27.png)
+![](2022-01-30-23-31-27.png)
 > hexo 默认的 marked 可能对公式支持不太高.
-> ![](assets/Hexo/2022-01-30-23-36-15.png)
+> ![](2022-01-30-23-36-15.png)
 
 注意：根据 GitHub 页面以及测试，它不仅支持常规通过 `$$` 添加公式. 直接在 markdown 里添加 Latex 公式也会成功渲染！呜呼~
 > 但是建议通过 `$$` 添加公式，因为 `\` 有转义问题，想换行的话，不用`$$`需要 4 个`\`
