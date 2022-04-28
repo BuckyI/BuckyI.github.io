@@ -45,7 +45,7 @@ render_drafts: false
 
 post_asset_folder: true # false
 
-relative_link: false # 如果设为true, 文章打开是没有格式的.. 不知道为啥
+relative_link: false # ~~如果设为true, 文章打开是没有格式的.. 不知道为啥~~
 future: true
 highlight:
   enable: true
