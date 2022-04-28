@@ -34,6 +34,8 @@
     
     <link rel="stylesheet" href="/css/style.css">
     
+    <link rel="stylesheet" href="/css/mystyle.css">
+    
 
 
 
@@ -254,306 +256,220 @@ mjx-container[display="true"] + br {
     <div class="post-content">
     <!-- markdownlint-disable MD033 -->
 <!-- markdownlint-disable MD025 -->
-<h1>HEXO</h1>
-<nav class="table-of-contents"><ul><li><a href="#%E9%85%8D%E7%BD%AE">配置</a><ul><li><a href="#%E5%AE%89%E8%A3%85">安装</a></li><li><a href="#%E9%83%A8%E7%BD%B2">部署</a><ul><li><a href="#%E9%83%A8%E7%BD%B2%E6%AD%A5%E9%AA%A4">部署步骤</a><ul><li><a href="#%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6">配置文件</a></li><li><a href="#%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%BB%A3%E7%A0%81">命令行代码</a></li></ul></li><li><a href="#%E7%94%9F%E6%88%90-ssh-key-%E5%B9%B6%E4%B8%8E-github-%E8%BF%9E%E6%8E%A5">生成 SSH key 并与 Github 连接</a><ul><li><a href="#%E6%9C%AC%E5%9C%B0%E7%94%9F%E6%88%90">本地生成</a></li><li><a href="#%E6%B7%BB%E5%8A%A0%E5%88%B0-github">添加到 GitHub</a></li><li><a href="#%E6%B5%8B%E8%AF%95-ssh-%E8%BF%9E%E6%8E%A5">测试 SSH 连接</a></li></ul></li></ul></li></ul></li><li><a href="#hexo-%E5%91%BD%E4%BB%A4">hexo 命令</a></li><li><a href="#yaml-%E6%96%87%E4%BB%B6%E5%A4%B4">yaml 文件头</a></li><li><a href="#%E5%86%99%E4%BD%9C%E8%AF%AD%E6%B3%95">写作语法</a><ul><li><a href="#tag-plugins">Tag Plugins</a></li></ul></li><li><a href="#%E5%9B%BE%E7%89%87%E6%98%BE%E7%A4%BA">图片显示</a><ul><li><a href="#%E5%9C%A8%E7%BA%BF%E5%9B%BE%E7%89%87">在线图片</a></li></ul></li><li><a href="#%E4%B8%BB%E9%A2%98">主题</a></li><li><a href="#%E6%8F%92%E4%BB%B6">插件</a><ul><li><a href="#%E6%8F%92%E4%BB%B6%E7%AE%A1%E7%90%86-hexagon">插件管理 hexagon</a></li><li><a href="#%E5%9B%BE%E7%89%87%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98">图片路径问题</a></li><li><a href="#search-%E5%8A%9F%E8%83%BD-hexo-generator-search">search 功能 hexo-generator-search</a></li><li><a href="#%E6%B8%B2%E6%9F%93%E5%99%A8">渲染器</a><ul><li><a href="#markdown-it-%E6%8F%92%E4%BB%B6">markdown-it 插件</a><ul><li><a href="#%E9%BB%98%E8%AE%A4%E6%8F%92%E4%BB%B6">默认插件</a></li><li><a href="#%E7%AC%AC%E4%B8%89%E6%96%B9%E6%8F%92%E4%BB%B6">第三方插件</a><ul><li><a href="#markdown-it-toc-done-right">markdown-it-toc-done-right</a></li></ul></li></ul></li></ul></li><li><a href="#%E5%85%AC%E5%BC%8F">公式</a><ul><li><a href="#%E5%B0%9D%E8%AF%95">尝试</a><ul><li><a href="#%E5%B0%9D%E8%AF%95%E4%B8%80-markdown-it-plus">尝试一 markdown-it-plus</a></li><li><a href="#%E5%B0%9D%E8%AF%95%E4%BA%8C-markdown-it-latex2img">尝试二 markdown-it-latex2img</a></li><li><a href="#%E5%B0%9D%E8%AF%95%E4%B8%89-hexo-filter-mathjax">尝试三 hexo-filter-mathjax</a></li></ul></li><li><a href="#%E5%85%B6%E4%BB%96%E6%96%B9%E6%A1%88">其他方案</a></li></ul></li><li><a href="#%E5%85%B6%E4%BB%96">其他</a></li></ul></li><li><a href="#problems">Problems</a></li></ul></nav><p><a target="_blank" rel="noopener" href="https://hexo.io/docs/">Documentation | Hexo</a></p>
+<h1 id="HEXO"><a href="#HEXO" class="headerlink" title="HEXO"></a>HEXO</h1><p>[toc]</p>
+<p><a href="https://hexo.io/docs/" target="_blank" rel="noopener">Documentation | Hexo</a></p>
 <blockquote>
-<p>一个小建议… 网上搜到的教程有很多过时的，如果真想解决不妨试试看官方文档以及插件的 GitHub 说明，有些旧版本需要插件才能实现的功能，新版本可能一个选项设定就搞定了（只不过这个选项需要自己找找…)</p>
+<p>一个小建议… 网上搜到的教程有很多过时的，如果真想解决不妨试试看官方文档以及插件的 GitHub 说明，有些旧版本需要插件才能实现的功能，新版本可能一个选项设定就搞定了（只不过这个选项需要自己找找..)</p>
 </blockquote>
-<h2 id="配置">配置</h2>
-<blockquote>
-<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/huanhao/p/hexobase.html">【基础篇】hexo 博客搭建教程 - huanhao - 博客园</a> √√√<br>
-<a target="_blank" rel="noopener" href="https://kchen.cc/2016/11/12/hexo-instructions/">基于 Hexo 的全自动博客构建部署系统 - KChen’s Blog</a></p>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><blockquote>
+<p><a href="https://www.cnblogs.com/huanhao/p/hexobase.html" target="_blank" rel="noopener">【基础篇】hexo 博客搭建教程 - huanhao - 博客园</a> √√√<br><a href="https://kchen.cc/2016/11/12/hexo-instructions/" target="_blank" rel="noopener">基于 Hexo 的全自动博客构建部署系统 - KChen’s Blog</a></p>
 </blockquote>
 <p>配置步骤总结：<code>2022.01.30</code></p>
 <ol>
 <li>安装基本的东西</li>
 <li>部署，和 GitHub 连接</li>
 <li>设置主题（影响后续的调整）</li>
-<li>安装必要的插件
-<ol>
+<li>安装必要的插件<ol>
 <li>解决图片路径问题那个 hexo-simple-image</li>
 <li>替换 markdown parser （默认的 marked 对公式支持不好）</li>
 <li>公式支持 hexo-filter-mathjax</li>
 </ol>
 </li>
 </ol>
-<p><a target="_blank" rel="noopener" href="https://kchen.cc/2016/11/12/hexo-instructions/">基于 Hexo 的全自动博客构建部署系统 - KChen’s Blog</a><br>
-我是跟着这个做的，写的非常详细（虽然另一个好像更详细）… 这里就不重复总结了… 只把初始几步的控制台输出放这里做参考. 还有后面几个可能出现困惑的地方</p>
-<h3 id="安装">安装</h3>
-<p>配置安装环境 git, node.js 并确认</p>
+<p><a href="https://kchen.cc/2016/11/12/hexo-instructions/" target="_blank" rel="noopener">基于 Hexo 的全自动博客构建部署系统 - KChen’s Blog</a><br>我是跟着这个做的，写的非常详细（虽然另一个好像更详细）.. 这里就不重复总结了.. 只把初始几步的控制台输出放这里做参考. 还有后面几个可能出现困惑的地方</p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>配置安装环境 git, node.js 并确认</p>
 <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">PS C:\Users\<span class="number">45489</span>&gt; node -v</span><br><span class="line">v16.<span class="number">10</span>.<span class="number">0</span></span><br><span class="line">PS C:\Users\<span class="number">45489</span>&gt; git --version</span><br><span class="line">git version <span class="number">2</span>.<span class="number">33</span>.<span class="number">0</span>.windows.<span class="number">2</span></span><br><span class="line">PS C:\Users\<span class="number">45489</span>&gt;</span><br></pre></td></tr></table></figure>
-<p>node 安装 hexo <code>npm install hexo-cli -g</code><br>
-进入一个目录作为存放博客资源的目录，然后：</p>
+
+<p>node 安装 hexo <code>npm install hexo-cli -g</code><br>进入一个目录作为存放博客资源的目录，然后：</p>
 <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">PS D:\&gt; hexo init Blog</span><br><span class="line">INFO  Cloning hexo-starter https://github.com/hexojs/hexo-starter.git</span><br><span class="line">INFO  Install dependencies</span><br><span class="line">INFO  <span class="built_in">Start</span> blogging with Hexo!</span><br><span class="line">PS D:\Blog&gt; npm install</span><br><span class="line">...</span><br><span class="line">PS D:\Blog&gt; hexo server</span><br><span class="line">INFO  Validating config</span><br><span class="line">INFO  <span class="built_in">Start</span> processing</span><br><span class="line">INFO  Hexo is running <span class="built_in">at</span> http://localhost:<span class="number">4000</span>/ . Press Ctrl+C to stop.</span><br></pre></td></tr></table></figure>
-<p>进入初始的网页：</p>
-<img src="/2022/01/31/Hexo/2022-01-26-19-31-16.png" class="">
-<p>其实来源于 source 文件夹下的 markdown 文件：[[hello-world]]</p>
-<h3 id="部署">部署</h3>
-<blockquote>
-<p><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/github-pages.html">将 Hexo 部署到 GitHub Pages | Hexo</a></p>
+
+<p>进入初始的网页：<br><img src="/2022/01/31/Hexo/2022-01-26-19-31-16.png" loading="lazy"><br>其实来源于 source 文件夹下的 markdown 文件：[[hello-world]]</p>
+<h3 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h3><blockquote>
+<p><a href="https://hexo.io/zh-cn/docs/github-pages.html" target="_blank" rel="noopener">将 Hexo 部署到 GitHub Pages | Hexo</a></p>
 </blockquote>
 <p>好像部署过后，一般要等一会才会显示正常.</p>
-<h4 id="部署步骤">部署步骤</h4>
-<h5 id="配置文件">配置文件</h5>
-<p><code>_config.yml</code> 里这样配置，把本地和仓库连接起来.</p>
+<h4 id="部署步骤"><a href="#部署步骤" class="headerlink" title="部署步骤"></a>部署步骤</h4><h5 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h5><p><code>_config.yml</code> 里这样配置，把本地和仓库连接起来.</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">https://github.com/BuckyI/BuckyI.github.io</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">main</span></span><br><span class="line">  <span class="attr">message:</span> </span><br></pre></td></tr></table></figure>
+
 <ul>
-<li>You will be prompted with username and password of the target repository, unless you authenticate with a token or ssh key.<br>
-在 Github 上添加本地的 ssh 的方法见后介绍. 如果不配置要输入用户名密码.</li>
-<li><a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment">One-Command Deployment | Hexo</a> 有详细的介绍</li>
+<li>You will be prompted with username and password of the target repository, unless you authenticate with a token or ssh key.<br>在 Github 上添加本地的 ssh 的方法见后介绍. 如果不配置要输入用户名密码.</li>
+<li><a href="https://hexo.io/docs/one-command-deployment" target="_blank" rel="noopener">One-Command Deployment | Hexo</a> 有详细的介绍</li>
 <li>可以添加多个 deployers</li>
 </ul>
 <blockquote>
-<p>看了一下好像可以把站点部署在<code>&lt;你的 GitHub 用户名&gt;.github.io</code>子目录里，也就是下面这样.</p>
+<p>看了一下<br>好像可以把站点部署在<code>&lt;你的 GitHub 用户名&gt;.github.io</code>子目录里，也就是下面这样.</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">repo:</span> <span class="string">https://github.com/&lt;username&gt;/&lt;project&gt;</span></span><br><span class="line"><span class="comment"># example, https://github.com/hexojs/hexojs.github.io</span></span><br><span class="line"><span class="attr">branch:</span> <span class="string">gh-pages</span></span><br></pre></td></tr></table></figure>
+
 <p>对应的<code>_config.yml</code>里 <code>url</code>一项配置为 <code>https://username.github.io/project</code></p>
 </blockquote>
 <p>注意这里 branch 应该写成 main, 那个教程里是 master 是因为老版本里 git 的主分支是 master, 现在默认的改成了 main</p>
-<h5 id="命令行代码">命令行代码</h5>
-<p><strong>You only need one single command to deploy your site to your server</strong>. <code>$ hexo deploy</code></p>
+<h5 id="命令行代码"><a href="#命令行代码" class="headerlink" title="命令行代码"></a>命令行代码</h5><p><strong>You only need one single command to deploy your site to your server</strong>. <code>$ hexo deploy</code></p>
 <blockquote>
-<p>官方文档后面有一个代码是 <code>hexo clean</code> &amp;&amp; <code>hexo deploy</code><br>
-这些命令具体作用什么不知道 TODO</p>
+<p>官方文档后面有一个代码是 <code>hexo clean</code> &amp;&amp; <code>hexo deploy</code><br>这些命令具体作用什么不知道 TODO</p>
 </blockquote>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+
 <p>也可以简化成 <code>hexo g -d</code>, 看了一下命令行，大概做了三个工作</p>
 <ol>
 <li>生成静态网页文件</li>
 <li>初始化本地 git</li>
 <li>推送到 GitHub 的制定仓库上</li>
 </ol>
-<h4 id="生成-SSH-key-并与-Github-连接">生成 SSH key 并与 Github 连接</h4>
-<blockquote>
-<p>这一块不太懂… SSH 是啥… TODO<br>
-总之 Github 有英文步骤说明，挺详细的，这里只是记录一下（翻译一下）感觉就是本地电脑的一个 id, 告诉 Github 账号，这样不需要密码也可以修改远程的仓库</p>
+<h4 id="生成-SSH-key-并与-Github-连接"><a href="#生成-SSH-key-并与-Github-连接" class="headerlink" title="生成 SSH key 并与 Github 连接"></a>生成 SSH key 并与 Github 连接</h4><blockquote>
+<p>这一块不太懂… SSH 是啥… TODO<br>总之 Github 有英文步骤说明，挺详细的，这里只是记录一下（翻译一下）<br>感觉就是本地电脑的一个 id, 告诉 Github 账号，这样不需要密码也可以修改远程的仓库</p>
 </blockquote>
-<h5 id="本地生成">本地生成</h5>
-<p><a target="_blank" rel="noopener" href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent">Generating a new SSH key and adding it to the ssh-agent - GitHub Docs</a></p>
+<h5 id="本地生成"><a href="#本地生成" class="headerlink" title="本地生成"></a>本地生成</h5><p><a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent" target="_blank" rel="noopener">Generating a new SSH key and adding it to the ssh-agent - GitHub Docs</a></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">45489@David MINGW64 /d/Blog</span><br><span class="line">$ ls -al ~/.ssh</span><br><span class="line">ls: cannot access '/c/Users/45489/.ssh': No such file or directory</span><br><span class="line"></span><br><span class="line">45489@David MINGW64 /d/Blog</span><br><span class="line">$ ssh-keygen -t ed25519 -C "454897555@qq.com"</span><br><span class="line">Generating public/private ed25519 key pair.</span><br><span class="line">Enter file in which to save the key (/c/Users/45489/.ssh/id_ed25519):</span><br><span class="line">Created directory '/c/Users/45489/.ssh'.</span><br><span class="line">Enter passphrase (empty for no passphrase):</span><br><span class="line">Enter same passphrase again:</span><br><span class="line">Your identification has been saved in /c/Users/45489/.ssh/id_ed25519</span><br><span class="line">Your public key has been saved in /c/Users/45489/.ssh/id_ed25519.pub</span><br><span class="line">The key fingerprint is:</span><br><span class="line">SHA256:bE+0Egd9ETftEzteTlJwz/MDNIWRqVFrjgcpHbLB1/E 454897555@qq.com</span><br><span class="line">The key's randomart image is:</span><br><span class="line">+--[ED25519 256]--+</span><br><span class="line">|        o+ .=O@+.|</span><br><span class="line">|         o*o=*+=+|</span><br><span class="line">|        .o+=o+ E=|</span><br><span class="line">|       . +.o= o+*|</span><br><span class="line">|        S o. o.==|</span><br><span class="line">|       . +  .  .o|</span><br><span class="line">|          .      |</span><br><span class="line">|                 |</span><br><span class="line">+----[SHA256]-----+</span><br><span class="line"></span><br><span class="line">45489@David MINGW64 /d/Blog</span><br><span class="line">$ ls -al ~/.ssh</span><br><span class="line">total 26</span><br><span class="line">drwxr-xr-x 1 45489 197609   0 Jan 26 20:07 ./</span><br><span class="line">drwxr-xr-x 1 45489 197609   0 Jan 26 20:07 ../</span><br><span class="line">-rw-r--r-- 1 45489 197609 411 Jan 26 20:07 id_ed25519</span><br><span class="line">-rw-r--r-- 1 45489 197609  98 Jan 26 20:07 id_ed25519.pub</span><br></pre></td></tr></table></figure>
-<img src="/2022/01/31/Hexo/2022-01-26-20-14-04.png" class="">
-<h5 id="添加到-GitHub">添加到 GitHub</h5>
-<p><a target="_blank" rel="noopener" href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account">Adding a new SSH key to your GitHub account - GitHub Docs</a></p>
+
+<p><img src="/2022/01/31/Hexo/2022-01-26-20-14-04.png" loading="lazy"></p>
+<h5 id="添加到-GitHub"><a href="#添加到-GitHub" class="headerlink" title="添加到 GitHub"></a>添加到 GitHub</h5><p><a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account" target="_blank" rel="noopener">Adding a new SSH key to your GitHub account - GitHub Docs</a></p>
 <p>关于复制 key, 可以在 git bash 里面 <code>$  clip &lt; ~/.ssh/id_ed25519.pub</code>, 好像直接找到那个文件复制也可以.</p>
 <p>会收到邮件</p>
 <blockquote>
 <p>The following SSH key was added to your account:</p>
-<p>DELL Aspiration SSH<br>
-SHA256:bE+0Egd9ETftEzteTlJwz/MDNIWRqVFrjgcpHbLB1/E</p>
-<p>If you believe this key was added in error, you can remove the key and disable<br>
-access at the following location:</p>
-<p><a target="_blank" rel="noopener" href="https://github.com/settings/keys">https://github.com/settings/keys</a></p>
+<p>DELL Aspiration SSH<br>SHA256:bE+0Egd9ETftEzteTlJwz/MDNIWRqVFrjgcpHbLB1/E</p>
+<p>If you believe this key was added in error, you can remove the key and disable<br>access at the following location:</p>
+<p><a href="https://github.com/settings/keys" target="_blank" rel="noopener">https://github.com/settings/keys</a></p>
 </blockquote>
-<h5 id="测试-SSH-连接">测试 SSH 连接</h5>
-<p><a target="_blank" rel="noopener" href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/testing-your-ssh-connection">Testing your SSH connection - GitHub Docs</a></p>
+<h5 id="测试-SSH-连接"><a href="#测试-SSH-连接" class="headerlink" title="测试 SSH 连接"></a>测试 SSH 连接</h5><p><a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/testing-your-ssh-connection" target="_blank" rel="noopener">Testing your SSH connection - GitHub Docs</a></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">45489@David MINGW64 /d/Blog</span><br><span class="line">$ ssh -T git@github.com</span><br><span class="line">The authenticity of host 'github.com (20.205.243.166)' can't be established.</span><br><span class="line">ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.</span><br><span class="line">This key is not known by any other names</span><br><span class="line">Are you sure you want to continue connecting (yes/no/[fingerprint])? SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU</span><br><span class="line">Warning: Permanently added 'github.com' (ED25519) to the list of known hosts.</span><br><span class="line">Hi BuckyI! You've successfully authenticated, but GitHub does not provide shell access.</span><br></pre></td></tr></table></figure>
-<p>连接成功</p>
-<img src="/2022/01/31/Hexo/2022-01-26-20-24-25.png" class="">
-<h2 id="hexo-命令">hexo 命令</h2>
-<p><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/commands">指令 | Hexo</a></p>
+
+<p>连接成功<br><img src="/2022/01/31/Hexo/2022-01-26-20-24-25.png" loading="lazy"></p>
+<h2 id="hexo-命令"><a href="#hexo-命令" class="headerlink" title="hexo 命令"></a>hexo 命令</h2><p><a href="https://hexo.io/zh-cn/docs/commands" target="_blank" rel="noopener">指令 | Hexo</a></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">PS D:\Blog&gt; hexo</span><br><span class="line">INFO  Validating config</span><br><span class="line">Usage: hexo &lt;<span class="built_in">command</span>&gt;</span><br><span class="line"></span><br><span class="line">Commands:</span><br><span class="line">  clean     Remove generated files and cache.</span><br><span class="line">  config    Get or <span class="built_in">set</span> configurations.</span><br><span class="line">  deploy    Deploy your website.</span><br><span class="line">  generate  Generate static files.</span><br><span class="line">  <span class="built_in">help</span>      Get <span class="built_in">help</span> on a <span class="built_in">command</span>.</span><br><span class="line">  init      Create a new Hexo folder.</span><br><span class="line">  list      List the information of the site</span><br><span class="line">  migrate   Migrate your site from other system to Hexo.</span><br><span class="line">  new       Create a new post.</span><br><span class="line">  publish   Moves a draft post from _drafts to _posts folder.</span><br><span class="line">  render    Render files with renderer plugins.</span><br><span class="line">  server    Start the server.</span><br><span class="line">  version   Display version information.</span><br><span class="line"></span><br><span class="line">Global Options:</span><br><span class="line">  --config  Specify config file instead of using _config.yml</span><br><span class="line">  --cwd     Specify the CWD</span><br><span class="line">  --debug   Display all verbose messages <span class="keyword">in</span> the terminal</span><br><span class="line">  --draft   Display draft posts</span><br><span class="line">  --safe    Disable all plugins and scripts</span><br><span class="line">  --silent  Hide output on console</span><br><span class="line"></span><br><span class="line">For more <span class="built_in">help</span>, you can use <span class="string">'hexo help [command]'</span> <span class="keyword">for</span> the detailed information</span><br><span class="line">or you can check the docs: http://hexo.io/docs/</span><br></pre></td></tr></table></figure>
-<h2 id="yaml-文件头">yaml 文件头</h2>
-<h2 id="写作语法">写作语法</h2>
-<h3 id="Tag-Plugins">Tag Plugins</h3>
-<p>除了普通的 markdown 语法，hexo 也有标签插件 Tag Plugins : 在文章中快速插入特定内容的插件。感觉相当于对 markdown 的语法扩展了.<br>
-<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/tag-plugins">标签插件（Tag Plugins） | Hexo</a></p>
+
+<h2 id="yaml-文件头"><a href="#yaml-文件头" class="headerlink" title="yaml 文件头"></a>yaml 文件头</h2><h2 id="写作语法"><a href="#写作语法" class="headerlink" title="写作语法"></a>写作语法</h2><h3 id="Tag-Plugins"><a href="#Tag-Plugins" class="headerlink" title="Tag Plugins"></a>Tag Plugins</h3><p>除了普通的 markdown 语法，hexo 也有标签插件 Tag Plugins : 在文章中快速插入特定内容的插件。<br>感觉相当于对 markdown 的语法扩展了.<br><a href="https://hexo.io/zh-cn/docs/tag-plugins" target="_blank" rel="noopener">标签插件（Tag Plugins） | Hexo</a></p>
 <blockquote>
 <p>标签插件不能用在 markdown 里面 <code>[]({% post_path lorem-ipsum %})</code> 🙅‍♂️</p>
 </blockquote>
 <p>例如代码：</p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">{% blockquote %}</span><br><span class="line">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque hendrerit lacus ut purus iaculis feugiat. Sed nec tempor elit, quis aliquam neque. Curabitur sed diam eget dolor fermentum semper at eu lorem.</span><br><span class="line">{% endblockquote %}</span><br><span class="line"></span><br><span class="line"><span class="quote">&gt; hi there!</span></span><br></pre></td></tr></table></figure>
-<p>实际显示：都是一样的</p>
-<img src="/2022/01/31/Hexo/2022-01-27-15-27-03.png" class="">
+
+<p>实际显示：都是一样的<br><img src="/2022/01/31/Hexo/2022-01-27-15-27-03.png" loading="lazy"></p>
 <p>在文章中使用 <code>&lt;!-- more --&gt;</code>，那么 <code>&lt;!-- more --&gt;</code> 之前的文字将会被视为摘要。首页中将只出现这部分文字，同时这部分文字也会出现在正文之中。</p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">摘要</span><br><span class="line">&lt;!--more--&gt;</span><br><span class="line">正文</span><br></pre></td></tr></table></figure>
+
 <p>上面这样写，主页就会显示摘要.</p>
-<h2 id="图片显示">图片显示</h2>
-<p>根据 <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/asset-folders">资源文件夹 | Hexo</a> 以及测试，图片显示和一般 markdown 不太一样… （<strong>有点坑</strong>）首先，绝对路径好像是不管用的，其次，网址形式的图片见下面总结，也有一些门道.</p>
-<p><strong>默认状态</strong>下（也就是 <code>post_asset_folder: false</code> 时）图片必须放在 <code>source</code> 文件夹中. 图片的相对路径会以 <code>source</code> 为起点查找.<br>
-例如图片位于 <code>source/images</code> 里，就应该为<code>![] (/images/image.jpg)</code>.<br>
-图片也可以直接放在 <code>source</code> 文件夹下，但是不能放在例如 <code>_folder</code> 这种文件夹里.<br>
-例如图片路径是 <code>sourse/image.jpg</code>, markdown 里面就写<code>![] (/image.jpg)</code>（注意不能去掉 <code>/</code>: <code>![] (image.jpg)</code> 会不显示！)</p>
-<p>如果 <code>_config.yml</code> 设置为 <code>post_asset_folder: true</code>, 那么每次 <code>hexo new title</code>, 除了对应位置生成 <code>title.md</code> 以外，还会生成 <code>title</code> 文件夹.<br>
-图片的相对路径会以 <code>title</code> 文件夹为起点查找.<br>
-例如 <code>![] (/image.jpg)</code> 就是把图片放在 <code>title/images</code> 里. （这里试过了去掉<code>/</code>: <code>![] (image.jpg)</code> 可以正常显示，放在子文件夹里也可以显示）</p>
+<h2 id="图片显示"><a href="#图片显示" class="headerlink" title="图片显示"></a>图片显示</h2><p>根据 <a href="https://hexo.io/zh-cn/docs/asset-folders" target="_blank" rel="noopener">资源文件夹 | Hexo</a> 以及测试，图片显示和一般 markdown 不太一样.. （<strong>有点坑</strong>）<br>首先，绝对路径好像是不管用的，其次，网址形式的图片见下面总结，也有一些门道.</p>
+<p><strong>默认状态</strong>下（也就是 <code>post_asset_folder: false</code> 时）图片必须放在 <code>source</code> 文件夹中. 图片的相对路径会以 <code>source</code> 为起点查找.<br>例如图片位于 <code>source/images</code> 里，就应该为<code>![] (/images/image.jpg)</code>.<br>图片也可以直接放在 <code>source</code> 文件夹下，但是不能放在例如 <code>_folder</code> 这种文件夹里.<br>例如图片路径是 <code>sourse/image.jpg</code>, markdown 里面就写<code>![] (/image.jpg)</code>（注意不能去掉 <code>/</code>: <code>![] (image.jpg)</code> 会不显示！)</p>
+<p>如果 <code>_config.yml</code> 设置为 <code>post_asset_folder: true</code>, 那么每次 <code>hexo new title</code>, 除了对应位置生成 <code>title.md</code> 以外，还会生成 <code>title</code> 文件夹.<br>图片的相对路径会以 <code>title</code> 文件夹为起点查找.<br>例如 <code>![] (/image.jpg)</code> 就是把图片放在 <code>title/images</code> 里. （这里试过了去掉<code>/</code>: <code>![] (image.jpg)</code> 可以正常显示，放在子文件夹里也可以显示）</p>
 <blockquote>
-<p>另外 <a target="_blank" rel="noopener" href="https://hexo.io/docs/tag-plugins#Embed-image">这里</a> 是写图片的 Tag Plugyins 语法，虽然方便很多，但是普通的 markdown 编辑器并不支持.</p>
+<p>另外 <a href="https://hexo.io/docs/tag-plugins#Embed-image" target="_blank" rel="noopener">这里</a> 是写图片的 Tag Plugyins 语法，虽然方便很多，但是普通的 markdown 编辑器并不支持.</p>
 </blockquote>
 <p>进一步，根据官方文档，应该这样设置：</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">post_asset_folder:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">marked:</span>  <span class="comment"># hexo-renderer-marked 3.1.0 introduced a new option that allows you to embed an image in markdown without using asset_img tag plugin.</span></span><br><span class="line">  <span class="attr">prependRoot:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">postAsset:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-<p>上面两种方式都与一般 markdown 不一样，因为一般情况下，markdown 的图片文件路径是以本文件所在路径为起点的.<br>
-如果想要统一起来的话，安装插件可以解决，详见 <a href="#%E5%9B%BE%E7%89%87%E8%B7%AF%E5%BE%84">后面</a></p>
+
+<p>上面两种方式都与一般 markdown 不一样，因为一般情况下，markdown 的图片文件路径是以本文件所在路径为起点的.<br>如果想要统一起来的话，安装插件可以解决，详见 <a href="#%E5%9B%BE%E7%89%87%E8%B7%AF%E5%BE%84">后面</a></p>
 <p>总结一下，要想显示图片</p>
 <ol>
-<li><s>图片都放在 <code>source</code> 下面</s> （不方便，不考虑）</li>
-<li>图片分别放在 <code>title</code> 文件夹里面，然后安装插件统一起来不过还有问题。… 因为我平时写的时候，对于<code>mark.md</code>, 图片喜欢放在<code>assets/mark/pic.jpg</code>也许只能以后转化的时候手动挪一挪了。</li>
+<li><del>图片都放在 <code>source</code> 下面</del> （不方便，不考虑）</li>
+<li>图片分别放在 <code>title</code> 文件夹里面，然后安装插件统一起来<br>不过还有问题。.. 因为我平时写的时候，对于<code>mark.md</code>, 图片喜欢放在<code>mark/pic.jpg</code><br>也许只能以后转化的时候手动挪一挪了。</li>
 <li>图床</li>
 </ol>
-<h3 id="在线图片">在线图片</h3>
-<p>防盗链 TO BE FINISHED</p>
-<h2 id="主题">主题</h2>
-<p>官方主题网站 <a target="_blank" rel="noopener" href="https://hexo.io/themes/">Themes | Hexo</a><br>
-可参考 <a target="_blank" rel="noopener" href="https://www.cnblogs.com/huanhao/p/hexobase.html">【基础篇】hexo 博客搭建教程 - huanhao - 博客园</a></p>
-<p>其实一般都有安装说明</p>
-<img src="/2022/01/31/Hexo/2022-01-26-21-37-47.png" class="">
+<h3 id="在线图片"><a href="#在线图片" class="headerlink" title="在线图片"></a>在线图片</h3><p>防盗链 TO BE FINISHED</p>
+<h2 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h2><p>官方主题网站 <a href="https://hexo.io/themes/" target="_blank" rel="noopener">Themes | Hexo</a><br>可参考 <a href="https://www.cnblogs.com/huanhao/p/hexobase.html" target="_blank" rel="noopener">【基础篇】hexo 博客搭建教程 - huanhao - 博客园</a></p>
+<p>其实一般都有安装说明<br><img src="/2022/01/31/Hexo/2022-01-26-21-37-47.png" loading="lazy"></p>
 <ul>
-<li>主题使用 coder 感觉比较简单.<img src="/2022/01/31/Hexo/2022-01-28-14-10-58.png" class="">
-</li>
-<li>一个更复杂的 Ocean 有点搞不好，以后熟悉了可以试一试.<br>
-<a target="_blank" rel="noopener" href="https://github.com/Xunzhuo/Coder">Xunzhuo/Coder: A fast、pure、practical、elegant Hexo theme for Developers🔥🔥🔥</a></li>
-<li>看到一个 Next, 好像挺受欢迎的，如果以后重度使用可以考虑一下<br>
-<a target="_blank" rel="noopener" href="https://search.bilibili.com/all?keyword=hexo%20next&amp;from_source=webtop_search&amp;spm_id_from=333.788">hexo next _ 搜索结果_哔哩哔哩_Bilibili</a></li>
-<li>好的例子~~ 可以学习一下 TODO<br>
-<a target="_blank" rel="noopener" href="https://shoka.lostyu.me/">Yume Shoka = 優萌初華 = 有夢書架</a></li>
+<li>主题使用 coder 感觉比较简单.<br><img src="/2022/01/31/Hexo/2022-01-28-14-10-58.png" loading="lazy"></li>
+<li>一个更复杂的 Ocean 有点搞不好，以后熟悉了可以试一试.<br><a href="https://github.com/Xunzhuo/Coder" target="_blank" rel="noopener">Xunzhuo/Coder: A fast、pure、practical、elegant Hexo theme for Developers🔥🔥🔥</a></li>
+<li>看到一个 Next, 好像挺受欢迎的，如果以后重度使用可以考虑一下<br><a href="https://search.bilibili.com/all?keyword=hexo%20next&from_source=webtop_search&spm_id_from=333.788" target="_blank" rel="noopener">hexo next _ 搜索结果_哔哩哔哩_Bilibili</a></li>
+<li>好的例子~~ 可以学习一下 TODO<br><a href="https://shoka.lostyu.me/" target="_blank" rel="noopener">Yume Shoka = 優萌初華 = 有夢書架</a></li>
 </ul>
-<h2 id="插件">插件</h2>
-<h3 id="插件管理-hexagon">插件管理 hexagon</h3>
-<p><code>npm list</code> 查看已经有的插件 (hexo 就是一套插件）卸载时 <code>npm uninstall xxx</code></p>
+<h2 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h2><h3 id="插件管理-hexagon"><a href="#插件管理-hexagon" class="headerlink" title="插件管理 hexagon"></a>插件管理 hexagon</h3><p><code>npm list</code> 查看已经有的插件 (hexo 就是一套插件）<br>卸载时 <code>npm uninstall xxx</code></p>
 <blockquote>
-<p><a target="_blank" rel="noopener" href="https://www.dazhuanlan.com/dennis-zoo/topics/995051">卸载 hexo 插件・大专栏</a>配置文件中有 PLugins 模块，删除对应的插件设置；删除 node_modules/ 目录下对应的插件文件</p>
+<p><a href="https://www.dazhuanlan.com/dennis-zoo/topics/995051" target="_blank" rel="noopener">卸载 hexo 插件・大专栏</a><br>配置文件中有 PLugins 模块，删除对应的插件设置；<br>删除 node_modules/ 目录下对应的插件文件</p>
 </blockquote>
-<p><a target="_blank" rel="noopener" href="https://github.com/adamsiwiec/hexagon">adamsiwiec/hexagon: A package manager for Hexo</a><br>
-这个一个管理插件和主题的插件。… 不过似乎只能查看以及新增，不能帮助卸载已有插件.</p>
+<p><a href="https://github.com/adamsiwiec/hexagon" target="_blank" rel="noopener">adamsiwiec/hexagon: A package manager for Hexo</a><br>这个一个管理插件和主题的插件。.. 不过似乎只能查看以及新增，不能帮助卸载已有插件.</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">PS D:\Blog&gt; hexagon --list</span><br><span class="line"></span><br><span class="line">⬡</span><br><span class="line"></span><br><span class="line">Plugins:</span><br><span class="line"></span><br><span class="line">        - hexo</span><br><span class="line">        - hexo-deployer-git</span><br><span class="line">        - hexo-generator-archive</span><br><span class="line">        - hexo-generator-category</span><br><span class="line">        - hexo-generator-index</span><br><span class="line">        - hexo-generator-searchdb</span><br><span class="line">        - hexo-generator-tag</span><br><span class="line">        - hexo-renderer-ejs</span><br><span class="line">        - hexo-renderer-less</span><br><span class="line">        - hexo-renderer-marked</span><br><span class="line">        - hexo-renderer-pug</span><br><span class="line">        - hexo-renderer-stylus</span><br><span class="line">        - hexo-server</span><br><span class="line">        - hexo-theme-landscape</span><br><span class="line"></span><br><span class="line">Themes:</span><br><span class="line"></span><br><span class="line">        - coder</span><br><span class="line">        - materialized</span><br><span class="line">        - noise</span><br><span class="line">        - ocean</span><br><span class="line">        - olive</span><br></pre></td></tr></table></figure>
-<h3 id="图片路径问题">图片路径问题</h3>
-<p><a id="图片路径"></a></p>
+
+<h3 id="图片路径问题"><a href="#图片路径问题" class="headerlink" title="图片路径问题"></a>图片路径问题</h3><p><a id="图片路径"></a></p>
 <blockquote>
-<p>前面有提到，hexo 加入图片的方法与 markdown 本身不兼容. 因为路径起点不一样.<br>
-百度的话，有很多就像 <a target="_blank" rel="noopener" href="https://www.cnblogs.com/codehome/p/8428738.html?utm_source=debugrun&amp;utm_medium=referral">这里</a> 说要安装一个 <code>hexo-asset-image</code><br>
-但是 <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues/4772#issuecomment-917356786">这里</a> 说其已经失效了.</p>
+<p>前面有提到，hexo 加入图片的方法与 markdown 本身不兼容. 因为路径起点不一样.<br>百度的话，有很多就像 <a href="https://www.cnblogs.com/codehome/p/8428738.html?utm_source=debugrun&utm_medium=referral" target="_blank" rel="noopener">这里</a> 说要安装一个 <code>hexo-asset-image</code><br>但是 <a href="https://github.com/hexojs/issues/4772#issuecomment-917356786" target="_blank" rel="noopener">这里</a> 说其已经失效了.</p>
 </blockquote>
-<p><code>npm install hexo-image-link --save</code><br>
-<a target="_blank" rel="noopener" href="https://github.com/cocowool/hexo-image-link">cocowool/hexo-image-link: 当 MD 中引用本地文件时，处理生成的 html 中的图片链接。</a>命令行输出比较多，好像所有图片都给你输出一遍，但是哪个地方出错了无法定位，它只输出一个没有路径，并且不进行替换。另外 <code>test/test.jpg</code> 能成功显示而 <code>./test/test.jpg</code> 就显示不了… 感觉不太接受</p>
-<img src="/2022/01/31/Hexo/2022-01-28-15-53-45.png" class="">
-<p><code>npm install hexo-simple-image --save</code><br>
-<a target="_blank" rel="noopener" href="https://github.com/ZaiZheTingDun/hexo-simple-image">ZaiZheTingDun/hexo-simple-image: hexo image plugins</a><br>
-这个命令行不输出东西，如果对应路径没有图片，它会直接报错，这样可以定位出错的位置.<br>
-<code>Unhandled rejection [hexo-simple-image] Error when analyze path 'test.jpg', Please use correct image path.</code><br>
-另外这个插件对于<code>test/test.jpg</code> 和 <code>./test/test.jpg</code>都能正常显示！</p>
+<p><code>npm install hexo-image-link --save</code><br><a href="https://github.com/cocowool/hexo-image-link" target="_blank" rel="noopener">cocowool/hexo-image-link: 当 MD 中引用本地文件时，处理生成的 html 中的图片链接。</a><br>命令行输出比较多，好像所有图片都给你输出一遍，但是哪个地方出错了无法定位，它只输出一个没有路径，并且不进行替换。<br>另外 <code>test/test.jpg</code> 能成功显示而 <code>./test/test.jpg</code> 就显示不了…. 感觉不太接受<br><img src="/2022/01/31/Hexo/2022-01-28-15-53-45.png" loading="lazy"></p>
+<p><code>npm install hexo-simple-image --save</code><br><a href="https://github.com/ZaiZheTingDun/hexo-simple-image" target="_blank" rel="noopener">ZaiZheTingDun/hexo-simple-image: hexo image plugins</a><br>这个命令行不输出东西，如果对应路径没有图片，它会直接报错，这样可以定位出错的位置.<br><code>Unhandled rejection [hexo-simple-image] Error when analyze path 'test.jpg', Please use correct image path.</code><br>另外这个插件对于<code>test/test.jpg</code> 和 <code>./test/test.jpg</code>都能正常显示！</p>
 <p>最终方案，用 <strong>hexo-simple-image</strong></p>
-<h3 id="search-功能-hexo-generator-search">search 功能 hexo-generator-search</h3>
-<blockquote>
-<p><a target="_blank" rel="noopener" href="https://zhwangart.com/2018/11/30/Ocean/#Toc-%E6%96%87%E7%AB%A0%E7%9B%AE%E5%BD%95">Ocean 中文文档 | 数学家</a> 评论区并不是只支持这个主题，安装了之后似乎用到搜索的都能行</p>
+<h3 id="search-功能-hexo-generator-search"><a href="#search-功能-hexo-generator-search" class="headerlink" title="search 功能 hexo-generator-search"></a>search 功能 hexo-generator-search</h3><blockquote>
+<p><a href="https://zhwangart.com/2018/11/30/Ocean/#Toc-%E6%96%87%E7%AB%A0%E7%9B%AE%E5%BD%95" target="_blank" rel="noopener">Ocean 中文文档 | 数学家</a> 评论区<br>并不是只支持这个主题，安装了之后似乎用到搜索的都能行</p>
 </blockquote>
 <p>首先 search 功能的开启需要依赖 hexo-generator-search 库，生成 seach 功能需要的 xml 文件。</p>
 <p>安装依赖：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save hexo-generator-search</span><br></pre></td></tr></table></figure>
+
 <p>然后在站点目录，也就是 hexo 目录下的_comfig.yml 添加一下配置，随便什么位置均可：</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">search:</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">search.xml</span></span><br><span class="line">  <span class="attr">field:</span> <span class="string">post</span></span><br></pre></td></tr></table></figure>
+
 <p>记得添加完保存配置后，hexo g，重新生成一次，这样 public 目录下就有 seach.xml 啦。</p>
 <blockquote>
-<p>下面的部分我没修改但是也能搜索…</p>
+<p>下面的部分我没修改但是也能搜索..</p>
 </blockquote>
 <p>在主题 layout/_partial 目录下找到 after-footer.ejs 中修改如下内容：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;% if (theme.local_search.enable){ %&gt;</span><br><span class="line">  &lt;%- js('/js/search') %&gt;</span><br><span class="line">&lt;% } %&gt;</span><br><span class="line"></span><br><span class="line">&lt;%- js('/js/ocean') %&gt;</span><br></pre></td></tr></table></figure>
+
 <p>然后就大功告成啦。</p>
-<h3 id="渲染器">渲染器</h3>
-<p>默认的是<code>hexo-renderer-marked</code><br>
-<a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-renderer-marked">hexojs/hexo-renderer-marked: Markdown renderer for Hexo</a> 有很多选项解释… 但是因为对公式支持度并不好换掉了</p>
+<h3 id="渲染器"><a href="#渲染器" class="headerlink" title="渲染器"></a>渲染器</h3><p>默认的是<code>hexo-renderer-marked</code><br><a href="https://github.com/hexojs/hexo-renderer-marked" target="_blank" rel="noopener">hexojs/hexo-renderer-marked: Markdown renderer for Hexo</a> 有很多选项解释.. 但是因为对公式支持度并不好换掉了</p>
 <p>如果去插件那里搜一下，其他的 renderer 有非常多. 但是我查了一下，vscode 用的是 markdown-it, pandoc 应该也可以.</p>
-<p><a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-renderer-markdown-it">hexojs/hexo-renderer-markdown-it: Markdown-it is a Markdown parser, done right. A faster and CommonMark compliant alternative for Hexo.</a></p>
-<img src="/2022/01/31/Hexo/2022-01-28-22-03-37.png" class="">
-<p><a target="_blank" rel="noopener" href="https://github.com/wzpan/hexo-renderer-pandoc">wzpan/hexo-renderer-pandoc: A pandoc-markdown-flavor renderer for hexo.</a></p>
-<p><code>2022.01.31</code> 选择的是 markdown-it<br>
-默认配置是下面这些，挺好的，可以看 <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-renderer-markdown-it">GitHub</a> 详细解释. （下面我也复制了一些注释）</p>
+<p><a href="https://github.com/hexojs/hexo-renderer-markdown-it" target="_blank" rel="noopener">hexojs/hexo-renderer-markdown-it: Markdown-it is a Markdown parser, done right. A faster and CommonMark compliant alternative for Hexo.</a><br><img src="/2022/01/31/Hexo/2022-01-28-22-03-37.png" loading="lazy"><br><a href="https://github.com/wzpan/hexo-renderer-pandoc" target="_blank" rel="noopener">wzpan/hexo-renderer-pandoc: A pandoc-markdown-flavor renderer for hexo.</a></p>
+<p><code>2022.01.31</code> 选择的是 markdown-it<br>默认配置是下面这些，挺好的，可以看 <a href="https://github.com/hexojs/hexo-renderer-markdown-it" target="_blank" rel="noopener">GitHub</a> 详细解释. （下面我也复制了一些注释）</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">markdown:</span></span><br><span class="line">  <span class="attr">preset:</span> <span class="string">'default'</span> <span class="comment"># similar to GFM, used when no preset name given. Enables all available rules, but still without html, typographer &amp; autolinker. （后面通过 render 和 anchors 补充）</span></span><br><span class="line">  <span class="attr">render:</span></span><br><span class="line">    <span class="attr">html:</span> <span class="literal">true</span>  <span class="comment"># Doesn't escape HTML content</span></span><br><span class="line">    <span class="attr">xhtmlOut:</span> <span class="literal">false</span> <span class="comment">#  This only needs to be true for complete CommonMark support.</span></span><br><span class="line">    <span class="attr">langPrefix:</span> <span class="string">'language-'</span> <span class="comment"># default</span></span><br><span class="line">    <span class="attr">breaks:</span> <span class="literal">true</span> <span class="comment"># Parser produces `&lt;br&gt;` tags every time there is a line break in the source document.</span></span><br><span class="line">    <span class="attr">linkify:</span> <span class="literal">true</span> <span class="comment"># If you write a piece of text that looks like a link it will be rendered as a link</span></span><br><span class="line">    <span class="attr">typographer:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">quotes:</span> <span class="string">'“”‘’'</span></span><br><span class="line">  <span class="attr">enable_rules:</span></span><br><span class="line">  <span class="attr">disable_rules:</span></span><br><span class="line">  <span class="attr">plugins:</span></span><br><span class="line">  <span class="attr">anchors:</span></span><br><span class="line">    <span class="attr">level:</span> <span class="number">2</span> <span class="comment"># h2 to h6 标题会设置 id, 方便锚点连接</span></span><br><span class="line">    <span class="attr">collisionSuffix:</span> <span class="string">''</span></span><br><span class="line">    <span class="attr">permalink:</span> <span class="literal">false</span>  <span class="comment"># If `true`, creates an anchor tag with a permalink besides the heading.</span></span><br><span class="line">    <span class="attr">permalinkClass:</span> <span class="string">'header-anchor'</span></span><br><span class="line">    <span class="attr">permalinkSide:</span> <span class="string">'left'</span></span><br><span class="line">    <span class="attr">permalinkSymbol:</span> <span class="string">'¶'</span></span><br><span class="line">    <span class="attr">case:</span> <span class="number">0</span></span><br><span class="line">    <span class="attr">separator:</span> <span class="string">'-'</span></span><br></pre></td></tr></table></figure>
-<p>建议把需要的 plugins 都 enable 了… 默认都是禁止的. 详见后面介绍.</p>
+
+<p>建议把需要的 plugins 都 enable 了.. 默认都是禁止的. 详见后面介绍.</p>
 <p>关于渲染器对于公式的支持问题，见 <a href="#%E5%85%AC%E5%BC%8F%E6%94%AF%E6%8C%81">这里</a></p>
-<h4 id="markdown-it-插件">markdown-it 插件</h4>
-<blockquote>
-<p><a target="_blank" rel="noopener" href="https://github.com/markdown-it">Markdown it!</a> 主页！从这里可以看有什么插件（大概只有官方插件），都有什么用<br>
-<a target="_blank" rel="noopener" href="https://www.npmjs.com/search?q=keywords:markdown-it-plugin">keywords:markdown-it-plugin - npm search</a><br>
-查找第三方插件</p>
+<h4 id="markdown-it-插件"><a href="#markdown-it-插件" class="headerlink" title="markdown-it 插件"></a>markdown-it 插件</h4><blockquote>
+<p><a href="https://github.com/markdown-it" target="_blank" rel="noopener">Markdown it!</a> 主页！<br>从这里可以看有什么插件（大概只有官方插件），都有什么用<br><a href="https://www.npmjs.com/search?q=keywords:markdown-it-plugin" target="_blank" rel="noopener">keywords:markdown-it-plugin - npm search</a><br>查找第三方插件</p>
 </blockquote>
-<h5 id="默认插件">默认插件</h5>
-<p>下面的是默认集成的 5 个 markdown-it 插件，另外有其他插件可以下载并在这里应用. 例子可见 <a href="#markdown-it-latex2img">markdown-it-latex2img 的安装和使用</a></p>
+<h5 id="默认插件"><a href="#默认插件" class="headerlink" title="默认插件"></a>默认插件</h5><p>下面的是默认集成的 5 个 markdown-it 插件，另外有其他插件可以下载并在这里应用. 例子可见 <a href="#markdown-it-latex2img">markdown-it-latex2img 的安装和使用</a></p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">plugins:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">markdown-it-abbr</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">markdown-it-cjk-breaks</span> <span class="comment">#  suppresses linebreaks between east asian characters. 似乎是优化了换行逻辑？</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">markdown-it-container</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">markdown-it-deflist</span> <span class="comment"># 定义列表</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">markdown-it-emoji</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">markdown-it-footnote</span> <span class="comment"># 脚注</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">markdown-it-ins</span> <span class="comment"># 下划线 ++xx++</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">markdown-it-mark</span> <span class="comment"># 高亮 =xx=</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">markdown-it-sub</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">markdown-it-sup</span></span><br></pre></td></tr></table></figure>
+
 <p>markdown-it-abbr 缩写插件</p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="emphasis">*[HTML]: Hyper Text Markup Language</span></span><br><span class="line"><span class="emphasis">*</span>[W3C]:  World Wide Web Consortium</span><br><span class="line"></span><br><span class="line">The HTML specification</span><br><span class="line">is maintained by the W3C.</span><br></pre></td></tr></table></figure>
-<p>The <abbr title="Hyper Text Markup Language">HTML</abbr> specification<br>
-is maintained by the <abbr title="World Wide Web Consortium">W3C</abbr>.</p>
+
+<p>*[HTML]: Hyper Text Markup Language<br>*[W3C]:  World Wide Web Consortium</p>
+<p>The HTML specification<br>is maintained by the W3C.</p>
 <p>markdown-it-footnote 脚注插件</p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">basic footnote[^1]</span><br><span class="line">here is an inline footnote[<span class="string">^2</span>](<span class="link">inline footnote</span>)</span><br><span class="line">and another one[^3]</span><br><span class="line">and another one[^4]</span><br><span class="line"></span><br><span class="line">[<span class="symbol">^1</span>]: <span class="link">basic footnote content</span></span><br><span class="line">[<span class="symbol">^3</span>]: <span class="link">paragraph</span></span><br><span class="line">footnote</span><br><span class="line">content</span><br><span class="line">[<span class="string">^4</span>]: footnote content with some [<span class="string">markdown</span>](<span class="link">https://en.wikipedia.org/wiki/Markdown</span>)</span><br></pre></td></tr></table></figure>
-<p>basic footnote<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup><br>
-here is an inline footnote[^2](inline footnote) # 这个测试不管用<br>
-and another one<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup><br>
-and another one<sup class="footnote-ref"><a href="#fn3" id="fnref3">[3]</a></sup></p>
-<p>markdown-it-ins：插入插件（下划线插件）<br>
-<code>++inserted++ =&gt; &lt;ins&gt;inserted&lt;/ins&gt;</code><br>
-markdown-it-sub：下标插件<br>
-<code>H~2~0 =&gt; H&lt;sub&gt;2&lt;/sub&gt;O</code><br>
-markdown-it-sup：上标插件<br>
-<code>29^th^ =&gt; 29&lt;sup&gt;th&lt;/sup&gt;</code><br>
-markdown-it-marked: 高亮<br>
-<code>==marked== =&gt; &lt;mark&gt;inserted&lt;/mark&gt;</code></p>
-<p>markdown-it-deflist 定义列表 同 <a target="_blank" rel="noopener" href="https://pandoc.org/MANUAL.html#definition-lists">Pandoc - Pandoc User’s Guide</a></p>
-<dl>
-<dt>Term 1</dt>
-<dd>
-<p>Definition 1</p>
-</dd>
-<dt>Term 2 with <em>inline markup</em></dt>
-<dd>
-<p>Definition 2</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">{ some code, part of Definition 2 }</span><br></pre></td></tr></table></figure>
-<p>Third paragraph of definition 2.</p>
-</dd>
-</dl>
-<h5 id="第三方插件">第三方插件</h5>
-<h6 id="markdown-it-toc-done-right">markdown-it-toc-done-right</h6>
-<p><a target="_blank" rel="noopener" href="https://github.com/nagaozen/markdown-it-toc-done-right">nagaozen/markdown-it-toc-done-right: A table of contents (TOC) plugin for Markdown-it with focus on semantic and security. Made to work gracefully with markdown-it-anchor.</a><br>
-<strong>建议</strong>也添加这个，以支持 <code>[toc]</code>.</p>
+
+<p>basic footnote[^1]<br>here is an inline footnote[^2](inline footnote) # 这个测试不管用<br>and another one[^3]<br>and another one[^4]</p>
+<p>[^1]: basic footnote content<br>[^3]: paragraph<br>footnote<br>content<br>[^4]: footnote content with some <a href="https://en.wikipedia.org/wiki/Markdown" target="_blank" rel="noopener">markdown</a></p>
+<p>markdown-it-ins：插入插件（下划线插件）<br><code>++inserted++ =&gt; &lt;ins&gt;inserted&lt;/ins&gt;</code><br>markdown-it-sub：下标插件<br><code>H~2~0 =&gt; H&lt;sub&gt;2&lt;/sub&gt;O</code><br>markdown-it-sup：上标插件<br><code>29^th^ =&gt; 29&lt;sup&gt;th&lt;/sup&gt;</code><br>markdown-it-marked: 高亮<br><code>==marked== =&gt; &lt;mark&gt;inserted&lt;/mark&gt;</code></p>
+<p>markdown-it-deflist 定义列表 同 <a href="https://pandoc.org/MANUAL.html#definition-lists" target="_blank" rel="noopener">Pandoc - Pandoc User’s Guide</a></p>
+<p>Term 1<br>:   Definition 1</p>
+<p>Term 2 with <em>inline markup</em><br>:   Definition 2</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">{ some code, part of Definition 2 }</span><br></pre></td></tr></table></figure>
+
+<p>  Third paragraph of definition 2.</p>
+<h5 id="第三方插件"><a href="#第三方插件" class="headerlink" title="第三方插件"></a>第三方插件</h5><h6 id="markdown-it-toc-done-right"><a href="#markdown-it-toc-done-right" class="headerlink" title="markdown-it-toc-done-right"></a>markdown-it-toc-done-right</h6><p><a href="https://github.com/nagaozen/markdown-it-toc-done-right" target="_blank" rel="noopener">nagaozen/markdown-it-toc-done-right: A table of contents (TOC) plugin for Markdown-it with focus on semantic and security. Made to work gracefully with markdown-it-anchor.</a><br><strong>建议</strong>也添加这个，以支持 <code>[toc]</code>.</p>
 <p>因为我可能会用程序自己给标题标序号，并且一般一级标题用来写全文题目. 所以这样设置：</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">plugins:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">"markdown-it-toc-done-right"</span></span><br><span class="line">    <span class="attr">options:</span></span><br><span class="line">      <span class="attr">level:</span> <span class="number">2</span></span><br><span class="line">      <span class="attr">listType:</span> <span class="string">'ul'</span></span><br></pre></td></tr></table></figure>
-<h3 id="公式">公式</h3>
-<p><a id="公式支持"></a></p>
-<p>参考资料：<br>
-<a target="_blank" rel="noopener" href="https://github.com/MakerGYT/markdown-it-latex2img">MakerGYT/markdown-it-latex2img: LaTex plugin for markdown-it markdown parser,Place LaTeX Math equation on anywhere as &lt;img&gt; tag.</a><br>
-<a target="_blank" rel="noopener" href="https://renzibei.com/2020/06/12/%E4%B8%BAHexo%E5%AF%BB%E6%89%BE%E4%B8%80%E4%B8%AA%E5%90%88%E9%80%82%E7%9A%84Latex%E6%96%B9%E6%A1%88/">为 Hexo 寻找一个合适的 Latex 方案 | 鸿雁自南人自北</a></p>
-<p>可以大概明白，markdown parser 原本并不支持公式（至少我安装了 hexo-renderer-markdown-it 后还是不支持），因为它的目的是把 markdown 语法给转化成 html, 而公式其实是扩展了 latex 语法.<br>
-所以要支持公式需要添加一些插件，而主流的公式解析要依靠 mathjax 或者 Katex, 有前端后端之分</p>
+
+<h3 id="公式"><a href="#公式" class="headerlink" title="公式"></a>公式</h3><p><a id="公式支持"></a></p>
+<p>参考资料：<br><a href="https://github.com/MakerGYT/markdown-it-latex2img" target="_blank" rel="noopener">MakerGYT/markdown-it-latex2img: LaTex plugin for markdown-it markdown parser,Place LaTeX Math equation on anywhere as &lt;img&gt; tag.</a><br><a href="https://renzibei.com/2020/06/12/%E4%B8%BAHexo%E5%AF%BB%E6%89%BE%E4%B8%80%E4%B8%AA%E5%90%88%E9%80%82%E7%9A%84Latex%E6%96%B9%E6%A1%88/" target="_blank" rel="noopener">为 Hexo 寻找一个合适的 Latex 方案 | 鸿雁自南人自北</a></p>
+<p>可以大概明白，markdown parser 原本并不支持公式（至少我安装了 hexo-renderer-markdown-it 后还是不支持），因为它的目的是把 markdown 语法给转化成 html, 而公式其实是扩展了 latex 语法.<br>所以要支持公式需要添加一些插件，而主流的公式解析要依靠 mathjax 或者 Katex, 有前端后端之分</p>
 <blockquote>
-<p>这个我也不太清楚，似乎一个是自己本地渲染好，例如字符替换，一个是要联网，就比如这个图片<img src="https://math.now.sh?inline=a%3D1%5Cle%201" style="display:inline-block;margin: 0;">，就是联网获取公式的结果）<code>&lt;img src="https://math.now.sh?inline=a%3D1%5Cle%201" style="display:inline-block;margin: 0;"/&gt;</code><br>
-还有要用 KateX 似乎必须添加 css</p>
+<p>这个我也不太清楚，似乎一个是自己本地渲染好，例如字符替换，一个是要联网，就比如这个图片<img src="https://math.now.sh?inline=a%3D1%5Cle%201" style="display:inline-block;margin: 0;">，就是联网获取公式的结果）<br><code>&lt;img src="https://math.now.sh?inline=a%3D1%5Cle%201" style="display:inline-block;margin: 0;"/&gt;</code><br>还有要用 KateX 似乎必须添加 css</p>
 <blockquote>
-<p>Katex plugin is enabled by default. However, this renderer alone does not work out of the box for mathematical formulas to display correctly on your website. Therefore, you do not need to do anything if you do not want to use Katex. Otherwise, if you want to use katex, you must add this css style to your website: <a target="_blank" rel="noopener" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css">https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css</a></p>
+<p>Katex plugin is enabled by default. However, this renderer alone does not work out of the box for mathematical formulas to display correctly on your website. Therefore, you do not need to do anything if you do not want to use Katex. Otherwise, if you want to use katex, you must add this css style to your website: <a href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" target="_blank" rel="noopener">https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css</a></p>
 </blockquote>
 </blockquote>
-<h4 id="尝试">尝试</h4>
-<h5 id="尝试一-markdown-it-plus">尝试一 markdown-it-plus</h5>
-<p>使用 markdown-it-plus 渲染器，说可以支持公式，但是显示不正常…</p>
-<img src="/2022/01/31/Hexo/2022-01-30-20-24-31.png" class="">
-<p>查了一下似乎得修改模板文件，让 html 标题头添加 css 文件… 不了解，没有尝试.</p>
+<h4 id="尝试"><a href="#尝试" class="headerlink" title="尝试"></a>尝试</h4><h5 id="尝试一-markdown-it-plus"><a href="#尝试一-markdown-it-plus" class="headerlink" title="尝试一 markdown-it-plus"></a>尝试一 markdown-it-plus</h5><p>使用 markdown-it-plus 渲染器，说可以支持公式，但是显示不正常…<br><img src="/2022/01/31/Hexo/2022-01-30-20-24-31.png" loading="lazy"><br>查了一下似乎得修改模板文件，让 html 标题头添加 css 文件.. 不了解，没有尝试.</p>
 <blockquote>
-<p>Katex plugin is enabled by default. However, this renderer alone does not work out of the box for mathematical formulas to display correctly on your website. Therefore, you do not need to do anything if you do not want to use Katex. Otherwise, if you want to use katex, you must add this css style to your website: <a target="_blank" rel="noopener" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css">https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css</a></p>
+<p>Katex plugin is enabled by default. However, this renderer alone does not work out of the box for mathematical formulas to display correctly on your website. Therefore, you do not need to do anything if you do not want to use Katex. Otherwise, if you want to use katex, you must add this css style to your website: <a href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" target="_blank" rel="noopener">https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css</a></p>
 </blockquote>
-<h5 id="尝试二-markdown-it-latex2img">尝试二 markdown-it-latex2img</h5>
-<p><a id="markdown-it-latex2img"></a></p>
-<p>安装 markdown-it parser, 并且用 markdown-it-latex2img 插件为 markdown-it 添加数学支持<br>
-<a target="_blank" rel="noopener" href="https://github.com/MakerGYT/markdown-it-latex2img">MakerGYT/markdown-it-latex2img: LaTex plugin for markdown-it markdown parser,Place LaTeX Math equation on anywhere as &lt;img&gt; tag.</a><br>
-不需要做其他任何调整，除了在 markdown-it 的选项中启用这个插件.<br>
-效果还是挺好的，看一下代码，行内公式 : <img src="https://math.now.sh?inline=a%3D1%5Cle%201" style="display:inline-block;margin: 0;"><br>
-行间公式（独立成段的） : <img src="https://math.now.sh?from=%5Cfrac%7Ba%7D%7Bb%7D%3D1%0A"><br>
-就是把公式渲染成了图片。但是对于我用的 coder 主题而言，效果是公式占满了一行.</p>
-<img src="/2022/01/31/Hexo/2022-01-30-22-47-07.png" class="">
-<p>看了下网页代码，发现有一行让图片宽度固定为 <code>100%</code> 的样式文件，来自于 <code>\themes\coder\source\css\_partial\markdown.styl</code> 里面的</p>
+<h5 id="尝试二-markdown-it-latex2img"><a href="#尝试二-markdown-it-latex2img" class="headerlink" title="尝试二 markdown-it-latex2img"></a>尝试二 markdown-it-latex2img</h5><p><a id="markdown-it-latex2img"></a></p>
+<p>安装 markdown-it parser, 并且用 markdown-it-latex2img 插件为 markdown-it 添加数学支持<br><a href="https://github.com/MakerGYT/markdown-it-latex2img" target="_blank" rel="noopener">MakerGYT/markdown-it-latex2img: LaTex plugin for markdown-it markdown parser,Place LaTeX Math equation on anywhere as &lt;img&gt; tag.</a><br>不需要做其他任何调整，除了在 markdown-it 的选项中启用这个插件.<br>效果还是挺好的，看一下代码，<br>行内公式 : <img src="https://math.now.sh?inline=a%3D1%5Cle%201" style="display:inline-block;margin: 0;"><br>行间公式（独立成段的） : <img src="https://math.now.sh?from=%5Cfrac%7Ba%7D%7Bb%7D%3D1%0A"><br>就是把公式渲染成了图片。<br>但是对于我用的 coder 主题而言，效果是公式占满了一行.<br><img src="/2022/01/31/Hexo/2022-01-30-22-47-07.png" loading="lazy"><br>看了下网页代码，发现有一行让图片宽度固定为 <code>100%</code> 的样式文件，来自于 <code>\themes\coder\source\css\_partial\markdown.styl</code> 里面的</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.post-content</span> <span class="selector-tag">img</span> {</span><br><span class="line">    <span class="attribute">border-style</span>: none;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">5px</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
-<p>把这个固定宽度删掉即可。不过最后没有采用这个方法。<strong>尝试三</strong>成功了，更容易一些.</p>
-<h5 id="尝试三-hexo-filter-mathjax">尝试三 hexo-filter-mathjax</h5>
-<blockquote>
-<p><a target="_blank" rel="noopener" href="https://renzibei.com/2020/06/12/%E4%B8%BAHexo%E5%AF%BB%E6%89%BE%E4%B8%80%E4%B8%AA%E5%90%88%E9%80%82%E7%9A%84Latex%E6%96%B9%E6%A1%88/">为 Hexo 寻找一个合适的 Latex 方案 | 鸿雁自南人自北</a><br>
-2020-07-17 更新： <strong>现在推荐所有使用 Hexo 的人都采用 hexo-filter-mathjax 插件</strong>，支持 unicode 字符，后端渲染，前端不用外挂 CSS 样式表和 Javascript 脚本。如果想找解决方案可以直接阅读 “Maxjax 后端渲染” 小节。</p>
+
+<p>把这个固定宽度删掉即可。<br>不过最后没有采用这个方法。<strong>尝试三</strong>成功了，更容易一些.</p>
+<h5 id="尝试三-hexo-filter-mathjax"><a href="#尝试三-hexo-filter-mathjax" class="headerlink" title="尝试三 hexo-filter-mathjax"></a>尝试三 hexo-filter-mathjax</h5><blockquote>
+<p><a href="https://renzibei.com/2020/06/12/%E4%B8%BAHexo%E5%AF%BB%E6%89%BE%E4%B8%80%E4%B8%AA%E5%90%88%E9%80%82%E7%9A%84Latex%E6%96%B9%E6%A1%88/" target="_blank" rel="noopener">为 Hexo 寻找一个合适的 Latex 方案 | 鸿雁自南人自北</a><br>2020-07-17 更新： <strong>现在推荐所有使用 Hexo 的人都采用 hexo-filter-mathjax 插件</strong>，支持 unicode 字符，后端渲染，前端不用外挂 CSS 样式表和 Javascript 脚本。如果想找解决方案可以直接阅读 “Maxjax 后端渲染” 小节。</p>
 </blockquote>
-<p>使用 hexo-filter-mathjax<br>
-<a target="_blank" rel="noopener" href="https://github.com/next-theme/hexo-filter-mathjax">next-theme/hexo-filter-mathjax: 💯 Server side MathJax renderer plugin for Hexo.</a></p>
+<p>使用 hexo-filter-mathjax<br><a href="https://github.com/next-theme/hexo-filter-mathjax" target="_blank" rel="noopener">next-theme/hexo-filter-mathjax: 💯 Server side MathJax renderer plugin for Hexo.</a></p>
 <blockquote>
-<p>his plugin is a server-side math rendering plugin, which does not depend on any front-end scripts.<br>
-不需要其他任何操作！包括修改模板文件</p>
+<p>his plugin is a server-side math rendering plugin, which does not depend on any front-end scripts.<br>不需要其他任何操作！包括修改模板文件</p>
 </blockquote>
-<p>这个插件是把公式渲染成了 svg 图片代码，不需要依靠外部支持. 也不依赖特定的渲染器（虽然 GitHub 主页推荐 pandoc)</p>
-<img src="/2022/01/31/Hexo/2022-01-30-23-31-27.png" class="">
+<p>这个插件是把公式渲染成了 svg 图片代码，不需要依靠外部支持. 也不依赖特定的渲染器（虽然 GitHub 主页推荐 pandoc)<br><img src="/2022/01/31/Hexo/2022-01-30-23-31-27.png" loading="lazy"></p>
 <blockquote>
-<p>hexo 默认的 marked 可能对公式支持不太高.</p>
-<img src="/2022/01/31/Hexo/2022-01-30-23-36-15.png" class="">
+<p>hexo 默认的 marked 可能对公式支持不太高.<br><img src="/2022/01/31/Hexo/2022-01-30-23-36-15.png" loading="lazy"></p>
 </blockquote>
 <p>注意：根据 GitHub 页面以及测试，它不仅支持常规通过 <code>$$</code> 添加公式. 直接在 markdown 里添加 Latex 公式也会成功渲染！呜呼~</p>
 <blockquote>
@@ -561,26 +477,11 @@ markdown-it-marked: 高亮<br>
 </blockquote>
 <p>默认情况下的设置是下面，可以把<code>every_page</code>设为 true</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">mathjax:</span></span><br><span class="line">  <span class="attr">tags:</span> <span class="string">none</span> <span class="comment"># or 'ams' or 'all'</span></span><br><span class="line">  <span class="attr">single_dollars:</span> <span class="literal">true</span> <span class="comment"># enable single dollar signs as in-line math delimiters</span></span><br><span class="line">  <span class="attr">cjk_width:</span> <span class="number">0.9</span> <span class="comment"># relative CJK char width</span></span><br><span class="line">  <span class="attr">normal_width:</span> <span class="number">0.6</span> <span class="comment"># relative normal (monospace) width</span></span><br><span class="line">  <span class="attr">append_css:</span> <span class="literal">true</span> <span class="comment"># add CSS to pages rendered by MathJax</span></span><br><span class="line">  <span class="attr">every_page:</span> <span class="literal">false</span> <span class="comment"># if true, every page will be rendered by MathJax regardless the `mathjax` setting in Front-matter</span></span><br><span class="line">  <span class="attr">extension_options:</span> {}</span><br><span class="line">    <span class="string">\#</span> <span class="string">you</span> <span class="string">can</span> <span class="string">put</span> <span class="string">your</span> <span class="string">extension</span> <span class="string">options</span> <span class="string">here</span></span><br><span class="line">    <span class="string">\#</span> <span class="string">see</span> <span class="string">http://docs.mathjax.org/en/latest/options/input/tex.html#tex-extension-options</span> <span class="string">for</span> <span class="string">more</span> <span class="string">detail</span></span><br></pre></td></tr></table></figure>
-<h4 id="其他方案">其他方案</h4>
-<p><a target="_blank" rel="noopener" href="https://www.dazhuanlan.com/roberto314/topics/1296905">Hexo 博客支持 KaTeX（回炉版）・大专栏</a> 这个里面写的方案：过程主要分为两大块：修改模板文件添加 katex.min.js 和 安装 katex.min.css、hexo-katex 插件。但是好像结果有缺陷，没有试.</p>
-<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/35988761">Hexo 构建 blog 时渲染 LaTeX 数学公式的问题 - 知乎</a> 这里写的，安装 <code>hexo-renderer-pandoc</code> 后，公式就能自动正常显示了. 不需要其他配置 (… 没试）</p>
-<h3 id="其他">其他</h3>
-<p><a target="_blank" rel="noopener" href="https://github.com/stephencroberts/hexo-filter-inline-assets">stephencroberts/hexo-filter-inline-assets: Hexo filter that inlines images, CSS, and JS in <abbr title="Hyper Text Markup Language">HTML</abbr></a> 据说图片小于规定数值时，图片就会设为 inline, 不错哦</p>
-<h2 id="Problems">Problems</h2>
-<p>有时候 deploy 后网页打开发现没有样式… 不过好像过一会就好了<a target="_blank" rel="noopener" href="https://segmentfault.com/q/1010000002924963">我用 hexo 部署到 github-pages 上的网页没有样式 - SegmentFault 思否</a></p>
-<hr class="footnotes-sep">
-<section class="footnotes">
-<ol class="footnotes-list">
-<li id="fn1" class="footnote-item"><p>basic footnote content <a href="#fnref1" class="footnote-backref">↩︎</a></p>
-</li>
-<li id="fn2" class="footnote-item"><p>paragraph<br>
-footnote<br>
-content <a href="#fnref2" class="footnote-backref">↩︎</a></p>
-</li>
-<li id="fn3" class="footnote-item"><p>footnote content with some <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Markdown">markdown</a> <a href="#fnref3" class="footnote-backref">↩︎</a></p>
-</li>
-</ol>
-</section>
+
+<h4 id="其他方案"><a href="#其他方案" class="headerlink" title="其他方案"></a>其他方案</h4><p><a href="https://www.dazhuanlan.com/roberto314/topics/1296905" target="_blank" rel="noopener">Hexo 博客支持 KaTeX（回炉版）・大专栏</a> 这个里面写的方案：过程主要分为两大块：修改模板文件添加 katex.min.js 和 安装 katex.min.css、hexo-katex 插件。但是好像结果有缺陷，没有试.</p>
+<p><a href="https://zhuanlan.zhihu.com/p/35988761" target="_blank" rel="noopener">Hexo 构建 blog 时渲染 LaTeX 数学公式的问题 - 知乎</a> 这里写的，安装 <code>hexo-renderer-pandoc</code> 后，公式就能自动正常显示了. 不需要其他配置 (… 没试）</p>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><p><a href="https://github.com/stephencroberts/hexo-filter-inline-assets" target="_blank" rel="noopener">stephencroberts/hexo-filter-inline-assets: Hexo filter that inlines images, CSS, and JS in HTML</a> 据说图片小于规定数值时，图片就会设为 inline, 不错哦</p>
+<h2 id="Problems"><a href="#Problems" class="headerlink" title="Problems"></a>Problems</h2><p>有时候 deploy 后网页打开发现没有样式.. 不过好像过一会就好了<br><a href="https://segmentfault.com/q/1010000002924963" target="_blank" rel="noopener">我用 hexo 部署到 github-pages 上的网页没有样式 - SegmentFault 思否</a></p>
 
 </div> 
 
