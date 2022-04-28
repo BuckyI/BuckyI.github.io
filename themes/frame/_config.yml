@@ -1,0 +1,80 @@
+
+# html lang
+language: ch
+
+# header
+site_brand_name: 无人之境
+
+logo_image:
+  enable: true
+  image_path: /Logo.jpg # path to your logo image
+
+menu: # 上面那一栏
+  Home: /
+  Archive: /archives/
+  Tags: /tag/
+  Gallery: /categories/gallery/
+  About: /about/
+
+# stylesheets loaded in the <head>
+stylesheets:
+- /css/style.css
+- /css/mystyle.css
+
+# scripts loaded in the end of the body
+scripts:
+- /js/frame.js
+
+# favicon
+favicon: /icon/icons8-lightning-strike-64.png
+
+date_format: MMM D, YYYY
+
+# profile
+profile:
+  title: HI, STRANGER
+  body: 死亡和直抒胸臆孰难孰易?
+  image: /profile_cover.gif
+
+  links:
+    Home: /
+    Blogs: /archives/
+    Knowledge: /knowledge/
+    Notion 🏔️: https://www.notion.so/mightymjolnir/cd51e697d23e441da73520f3f7e3bef4
+    GitHub 🚀: https://github.com/BuckyI
+    Weibo 👁️: https://weibo.com/zkmjolnir
+
+# footer
+footer:
+  copyright_info:
+    enable: true
+    author: © BuckyBuck
+
+  powered_by: # Powered by Hexo & Frame
+    enable: true
+
+  other_info:
+    enable: false
+    content: Wish you a happy day.
+
+# color mode: default / classic / dark
+color_mode: classic
+
+# mathjax setting
+# note: need to install the hexo plugin for math: https://github.com/hexojs/hexo-math
+mathjax_enable: false
+
+# comments: support disqus and valine
+valine: # valine setup guide: https://valine.js.org/quickstart.html
+  enable: false
+  appId: # Your valine app Id
+  appKey: # Your valine app Key
+  lang: 'en'
+  placeholder: 'Say something'
+  avatar: 'mp'
+  meta: ['nick', 'mail']
+
+disqus: # disqus setup guide: https://help.disqus.com/en/articles/1717056-publisher-quick-start-guide
+  enable: false
+  disqus_url: # your diqsuq url or shortname
+  language: 'en'

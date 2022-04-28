@@ -6,5 +6,8 @@ node_modules/
 public/
 .deploy*/
 
-themes
+other_themes
+
 .github
+source/_posts/关于世界的旅行.md
+source/about/index.md

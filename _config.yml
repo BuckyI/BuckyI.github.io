@@ -149,3 +149,8 @@ deploy:
   branch: main
   message: # 🚀
 
+backup:
+  type: git
+  theme: frame
+  repository:
+      github: git@github.com:BuckyI/BuckyI.github.io.git,source
