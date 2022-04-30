@@ -95,7 +95,7 @@ deploy:
 > ```yml
 > deploy:
 > type: git
-> repo: https://github.com/<username>/<project>
+> repo: https://github.com/username/project
 > # example, https://github.com/hexojs/hexojs.github.io
 > branch: gh-pages
 >```
