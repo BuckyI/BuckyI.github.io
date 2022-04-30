@@ -1,7 +1,7 @@
 {
   "legacyEditor": false,
   "livePreview": true,
-  "showFrontmatter": true,
+  "showFrontmatter": false,
   "showLineNumber": true,
   "useTab": false,
   "useMarkdownLinks": true,
@@ -10,7 +10,8 @@
     "other_themes/",
     "public/"
   ],
-  "attachmentFolderPath": "./README",
+  "attachmentFolderPath": "./关于穿越世界的旅行",
   "alwaysUpdateLinks": true,
-  "newLinkFormat": "shortest"
+  "newLinkFormat": "shortest",
+  "readableLineLength": false
 }

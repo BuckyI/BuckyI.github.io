@@ -9,8 +9,9 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "source/_drafts/关于世界的旅行.md",
+            "file": "source/_drafts/关于穿越世界的旅行.md",
             "mode": "source",
+            "backlinks": false,
             "source": false
           }
         }
@@ -66,15 +67,15 @@
   },
   "active": "6bd1b44921904b3d",
   "lastOpenFiles": [
-    "source/_drafts/关于世界的旅行.md",
+    "source/_drafts/关于穿越世界的旅行.md",
+    "source/about/index.md",
     "README.md",
     "source/_drafts/关于世界的旅行/2022-04-30-12-36-23.png",
-    "source/_drafts/关于世界的旅行/2022-04-28-22-16-20.png",
-    "source/_drafts/关于世界的旅行/20220331170422.png",
+    "source/_drafts/关于穿越世界的旅行/2022-04-28-22-16-20.png",
+    "source/_drafts/关于穿越世界的旅行/20220331170422.png",
     "source/_posts/Hexo.md",
     "source/_posts/hello-world.md",
     "source/_posts/旧图片.md",
-    "source/_posts/过去、我、未来.md",
-    "source/_drafts/关于世界的旅行/20220331170431.png"
+    "source/_posts/过去、我、未来.md"
   ]
 }
