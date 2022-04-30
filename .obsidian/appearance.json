@@ -1,0 +1,9 @@
+{
+  "theme": "moonstone",
+  "cssTheme": "Minimal",
+  "interfaceFontFamily": "",
+  "textFontFamily": "",
+  "enabledCssSnippets": [
+    "style"
+  ]
+}

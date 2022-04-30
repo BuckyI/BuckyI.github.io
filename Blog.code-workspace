@@ -21,6 +21,7 @@
 		"frontMatter.taxonomy.tags": [
 			"Diary"
 		],
-		"frontMatter.taxonomy.dateFormat": "YYYY-MM-DD HH:mm:ss"
+		"frontMatter.taxonomy.dateFormat": "YYYY-MM-DD HH:mm:ss",
+		"pasteImage.path": "${currentFileDir}/${currentFileNameWithoutExt}/"
 	}
 }

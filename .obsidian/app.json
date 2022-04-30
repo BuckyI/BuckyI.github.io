@@ -1,0 +1,16 @@
+{
+  "legacyEditor": false,
+  "livePreview": true,
+  "showFrontmatter": true,
+  "showLineNumber": true,
+  "useTab": false,
+  "useMarkdownLinks": true,
+  "userIgnoreFilters": [
+    "node_modules/",
+    "other_themes/",
+    "public/"
+  ],
+  "attachmentFolderPath": "./README",
+  "alwaysUpdateLinks": true,
+  "newLinkFormat": "shortest"
+}
