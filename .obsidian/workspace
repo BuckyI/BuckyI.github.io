@@ -6,7 +6,6 @@
       {
         "id": "6bd1b44921904b3d",
         "type": "leaf",
-        "dimension": 55.65428109854604,
         "state": {
           "type": "markdown",
           "state": {
@@ -15,23 +14,7 @@
             "backlinks": false,
             "source": true
           }
-        },
-        "group": "fb2b5f14f2e9eb7c"
-      },
-      {
-        "id": "035905a8b8b479d3",
-        "type": "leaf",
-        "dimension": 44.34571890145396,
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "source/_posts/Everything.md",
-            "mode": "preview",
-            "backlinks": false,
-            "source": true
-          }
-        },
-        "group": "fb2b5f14f2e9eb7c"
+        }
       }
     ],
     "direction": "vertical"
@@ -86,6 +69,7 @@
   "active": "6bd1b44921904b3d",
   "lastOpenFiles": [
     "source/_posts/Everything.md",
+    "source/_posts/Everything/20220602133139.jpeg",
     "source/_posts/Everything/20220602130227.jpeg",
     "source/_posts/关于穿越世界的旅行/20220517211946.png",
     "source/_drafts/关于穿越世界的旅行.md",
@@ -93,7 +77,6 @@
     "README.md",
     "source/_drafts/关于世界的旅行/2022-04-30-12-36-23.png",
     "source/_drafts/关于穿越世界的旅行/2022-04-28-22-16-20.png",
-    "source/_drafts/关于穿越世界的旅行/20220331170422.png",
-    "source/_posts/Hexo.md"
+    "source/_drafts/关于穿越世界的旅行/20220331170422.png"
   ]
 }
